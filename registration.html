@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Registration Page</title>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form> 
+        <div>First Name<input type="text" placeholder="firstname"></div><br>
+        <div>Last Name<input type="text" placeholder="lastname"></div><br>
+        <div>Date of Birth<input type="date"></div><br>
+        <div>Password<input type="password"></div><br>
+        <div>Qualifications:  Btech<input type="checkbox" checked>
+        Mtech<input type="checkbox" > MBA<input type="checkbox">
+        Phd<input type="checkbox"></div><br>
+        <div>Gender: Male<input type="radio" name="gender">
+        Female<input type="radio" name="gender"></div><br>
+        <div>
+        <label for="countries">Choose a country:</label>
+        <select name="countries" >
+          <option value="Argentia">Argentia</option> 
+          <option value="Spain">Spain</option>
+          <option value="Russia">Russia</option>
+          <option value="India">India</option>
+          <option value="Australia">Australia</option>
+        </select>
+        </div><br>
+        <div>Mobile<input type="tel" placeholder="mobile" maxlength="10">
+        </div><br>
+        <label for="comments">Comments</label>
+
+        <textarea  rows="4" cols="50">
+        Enter comments here
+        </textarea>
+        <br>
+        <button type="submit" value="register">Submit</button>
+        <button type="reset" value="cancel">Cancel</button>
+        </form>
+    </body>
+</html>
