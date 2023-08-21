@@ -1,0 +1,13 @@
+Ass-1
+select e.emp_no,e.emp_name,e.emp_sal,d.dept_no,d.dept_name,d.dept_manager,a.city,a.state from address a inner join department d on d.address_id=a.address_id inner join
+employee e on e.dept_no=d.dept_no;
+
+ass-2 
+
+create table bankaccount(acc_no int,acc_opened_date date,status text,balance double,primary key(acc_no));
+create table transaction( acc_no int, trans_type text, trans_date date,  trans_amount double,foreign key(acc_no) references bankaccount(acc_no) on delete cascade);
+
+ass-3
+
+select manager_name,sum(emp_sal) from employee group by manager_name;
+select min(emp_sal) as min_sal from (select distinct(emp_sal) from employee order by emp_sal desc limit 4) as salaries;
