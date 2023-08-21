@@ -1,0 +1,10 @@
+create table department(dept_no int,dept_name text,dept_loc text,primary key(dept_no));
+desc department;
+insert into department values(101,'accounts','hyd'),(102,'management','blr'),(103,'ase','hyd');
+select * from department;
+create table employee(emp_no int,emp_name text,emp_age int,emp_gender char(1),dept_no int, check(emp_age>=18),check(emp_gender in ('M','F')),primary key(emp_no), foreign key(dept_no) references department(dept_no) on delete cascade);
+desc employee;
+insert into employee values(501,'Ayan',30,'M',102),(502,'Rohan',25,'M',101),(503,'Cindrella',22,'F',101),(504,'Shyam',23,'M',103);
+delete from department where dept_no = 101;
+ select * from department;
+ select * from employee;

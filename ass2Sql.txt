@@ -1,0 +1,10 @@
+create table Course(course_no int,roll_student int,course_name text , primary key(roll_student));
+desc course;
+create table Course_copy as select * from course;
+desc Course_copy;
+alter table Course_copy add column(dept_no int,dept_name text);
+desc Course_copy;
+alter table Course_copy drop dept_no,drop dept_name;
+desc Course_copy;
+alter table Course_copy rename column roll_student to roll_stu;
+desc Course_copy;
