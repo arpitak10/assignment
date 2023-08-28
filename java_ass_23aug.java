@@ -28,7 +28,7 @@ class Emp{
         return empid+" "+empName+" "+salary;
     }
 }
-public class java_ass_24aug.s {
+public class java_ass_23aug.s {
     public static void main(String[] args) {
         Deque<Emp> deque = new ArrayDeque<>();
         deque.offer(new Emp(101,"Rama",3000));
@@ -39,7 +39,7 @@ public class java_ass_24aug.s {
 //hashmap of emailId and password 
 
 public class Main {
-    public static void ava_ass_24aug(String[] args) {
+    public static void ava_ass_23aug(String[] args) {
         HashMap<String ,String >emailAccountMap = new HashMap<>();
         emailAccountMap.put("Ajay@gmail.com", "Ajay@123");
         emailAccountMap.put("Anay@gmail.com", "Anay@123");
@@ -116,7 +116,7 @@ class Employee{
     }
 }
 public  class Main {
-    public static void java_ass_24aug(String[] args) {
+    public static void java_ass_23aug(String[] args) {
         HashMap<Employee,Address>map = new HashMap<>();
         map.put(new Employee(101,"aJAY",1000,10),new Address("123","roop","blr","KN"));
         map.put(new Employee(102,"JAY",2000,10),new Address("124","roop","blr","KN"));
