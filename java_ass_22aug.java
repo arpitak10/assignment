@@ -13,7 +13,7 @@ class X{
     }
 }
 public class Main {
-    public static void java_ass_23aug(String[] args){
+    public static void java_ass_22aug(String[] args){
 
         //System.out.println(X.getx().x);
         X x1 = X.getx();
