@@ -49,7 +49,7 @@ class IntegerArray {
 }
 
 public class Main {
-    public static void main(String[] args) {
+    public static void java_ass_24Aug(String[] args) {
         IntegerArray intArr = new IntegerArray(7);
         for (int i=0;i<7;i++){
             intArr.setElement(i,(i+1)*2);
