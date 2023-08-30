@@ -1,0 +1,45 @@
+package org.example.DAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.HashMap;
+
+public class OrderedProductDAO {
+    private static String url = "jdbc:mysql://localhost:3306/gain";
+    public void displayOrderedProductById(int productId){
+        try(Connection con = DriverManager.getConnection(url, "root", "Arpitak@10");
+            PreparedStatement pst = con.prepareStatement("select p.prod_id,p.prod_name,p.prod_desc,p.prod_price,p.prod_quantity,po.order_date from product p inner join ordered_products op on op.prod_id = p.prod_id inner join product_order po on po.order_id = op.order_id where p.prod_id = ?")){
+
+            pst.setInt(1,productId);
+            ResultSet rs  = pst.executeQuery();
+            while (rs.next()){
+                System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getInt(4)+" "+rs.getInt(5)+" "+rs.getString(6));
+            }
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+
+        }
+    }
+
+    public void displayOrderedProductByOrderDate(String orderDate){
+        try(Connection con = DriverManager.getConnection(url, "root", "Arpitak@10");
+            PreparedStatement pst = con.prepareStatement("select p.prod_id,p.prod_name,p.prod_desc,p.prod_price,p.prod_quantity,po.order_date from product p inner join ordered_products op on op.prod_id = p.prod_id inner join product_order po on po.order_id = op.order_id where po.order_date = ? ")){
+
+            pst.setString(1,orderDate);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()){
+                System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getInt(4)+" "+rs.getInt(5)+" "+rs.getString(6));
+            }
+
+
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+    }
+
+}
