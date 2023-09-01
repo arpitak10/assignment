@@ -1,3 +1,11 @@
+//it is the BookStore(DAO) class
+//Design a class called BookStore which contains an appropriate collection object to store Book instances. 
+//Implement the below operations. 
+//1. addBook(Book b)     To add a new Book object into the book table 
+//2. searchByTitle(String title)   Search a book from DB based on title and if found, display the details 
+//3. searchByAuthor(String author) Search a book from DB based on author and if found, display the details 
+//4. displayAll()  Print the details of all the books 
+
 package com.book;
 
 import java.sql.Connection;
