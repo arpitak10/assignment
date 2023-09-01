@@ -1,4 +1,10 @@
 //Main function is BookUtil with the package bookUtil  and here InvalidBookException also makes
+//Create a class BookUtil in package com.bookutil which has the main method. 
+//1• Instantiate the BookStore class 
+//2• Read data from user for 3 Book objects. 
+//3• Call the addBook method to add the book objects into the collection 
+//4• Search the books by title and author 
+//5• Display all the book details 
 package com.bookUtil;
 
 import com.book.Book;
