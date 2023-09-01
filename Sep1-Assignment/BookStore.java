@@ -5,6 +5,12 @@
 //2. searchByTitle(String title)   Search a book from DB based on title and if found, display the details 
 //3. searchByAuthor(String author) Search a book from DB based on author and if found, display the details 
 //4. displayAll()  Print the details of all the books 
+//Perform the below validations 
+//1• Category must be “Science”, “Fiction”, “Technology” or “Others” 
+//2• Price cannot be negative 
+//3• bookID must start with ‘B’ and must be of length 4 characters 
+
+
 
 package com.book;
 
